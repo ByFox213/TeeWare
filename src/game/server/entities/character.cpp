@@ -1204,10 +1204,11 @@ void CCharacter::Snap(int SnappingClient)
 		}
 	}
 
-	int flags = pCharacter->m_PlayerFlags = GetPlayer()->m_PlayerFlags;
-	if (flags >= (1 << 5)) { // bot
-		m_pPlayer->m_BanFlags = flags;
-	}
+    // In versions from 18090 bans for cheat flags
+	// int flags = pCharacter->m_PlayerFlags = GetPlayer()->m_PlayerFlags;
+	// if (flags >= (1 << 5)) { // bot
+	// 	m_pPlayer->m_BanFlags = flags;
+	// }
 }
 
 int CCharacter::NetworkClipped(int SnappingClient)
